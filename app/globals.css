@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 23, 21, 19;
+  --background-start-rgb: 242, 236, 228;
+  --background-end-rgb: 233, 226, 215;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+  background-color: #f2ece4;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #f2ece4;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+::selection {
+  background-color: #c59b48;
+  color: #ffffff;
+}
+
+/* Luxury minimal custom scrollbar matching warm showroom tones */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2ece4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c8bfb3;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a87c28;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
